@@ -26,6 +26,9 @@ services:
       - type: bind
         source: /home/production/basesite/crontab
         target: /etc/crontab
+      - type: bind
+        source: bash_history
+        target: /home/production/.bash_history
 
   breedbase_db:
     image: breedbase/pg:latest
